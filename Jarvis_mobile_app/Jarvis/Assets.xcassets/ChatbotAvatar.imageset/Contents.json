@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "chat-bot-icon-virtual-smart-1024px.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "chat-bot-icon-virtual-smart-1024px 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "chat-bot-icon-virtual-smart-1024px 2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
