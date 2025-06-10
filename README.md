@@ -12,11 +12,10 @@ Jarvis Chatbot Assistant là một ứng dụng di động đa năng được ph
 <br>
 
 <p align="center">
-  <img src="https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_02.jpg" width="45%" />
-  <img src="https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_03.jpg" width="45%" />
+  <img src="https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_02.jpg" width="30%" />
+  <img src="https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_03.jpg" width="30%" />
+  <img src="https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_04.jpg" width="30%" />
 </p>
-
-![alt text]()
 
 ## Cài đặt
 Để chạy ứng dụng Jarvis Chatbot trên mobile device hoặc simulator của bạn, hãy làm theo các bước sau:
