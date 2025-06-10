@@ -13,7 +13,7 @@ Jarvis Chatbot Assistant là một ứng dụng di động đa năng được ph
 
 <p align="center">
   <img src="https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_02.jpg" width="45%" />
-  <img src="link_anh_2" width="45%" />
+  <img src="https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_03.jpg" width="45%" />
 </p>
 
 ![alt text]()
