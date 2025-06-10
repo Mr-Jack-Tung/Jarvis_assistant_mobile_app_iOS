@@ -9,6 +9,7 @@ Jarvis Chatbot Assistant là một ứng dụng di động đa năng được ph
 -   **Quản lý lịch sử trò chuyện:** Lưu trữ và xem lại các cuộc hội thoại trước đó.
 -   **Cài đặt linh hoạt:** Cho phép người dùng cấu hình khóa API và chọn nhà cung cấp AI.
 -   **Hỗ trợ đa ngôn ngữ:** Ứng dụng có khả năng hỗ trợ nhiều ngôn ngữ (hiện tại là tiếng Anh và tiếng Việt).
+<br>
 
 ![alt text](https://github.com/Mr-Jack-Tung/Jarvis_assistant_mobile_app_iOS/blob/main/Screenshoot/v0_1_03/IMG_02.jpg)
 
