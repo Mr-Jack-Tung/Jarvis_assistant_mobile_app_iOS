@@ -12,6 +12,8 @@
 		881B66B22DF6CA1200DE207D /* CameraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B66B12DF6CA1200DE207D /* CameraPickerView.swift */; };
 		881B66B42DF71B7800DE207D /* ChatHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B66B32DF71B7800DE207D /* ChatHistoryView.swift */; };
 		881B66B62DF726E300DE207D /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B66B52DF726E300DE207D /* LanguageManager.swift */; };
+		882BA3D02DF7ED35003BE154 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 882BA3CF2DF7ED35003BE154 /* SwiftOpenAI */; };
+		882BA3D22DF7EDA3003BE154 /* OpenAIChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BA3D12DF7EDA3003BE154 /* OpenAIChat.swift */; };
 		883A26B62DF5DD9200A55DA3 /* JarvisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883A26B52DF5DD9200A55DA3 /* JarvisApp.swift */; };
 		883A26BA2DF5DD9400A55DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883A26B92DF5DD9400A55DA3 /* Assets.xcassets */; };
 		883A26BD2DF5DD9400A55DA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883A26BC2DF5DD9400A55DA3 /* Preview Assets.xcassets */; };
@@ -53,6 +55,7 @@
 		881B66B12DF6CA1200DE207D /* CameraPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerView.swift; sourceTree = "<group>"; };
 		881B66B32DF71B7800DE207D /* ChatHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatHistoryView.swift; sourceTree = "<group>"; };
 		881B66B52DF726E300DE207D /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		882BA3D12DF7EDA3003BE154 /* OpenAIChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIChat.swift; sourceTree = "<group>"; };
 		883A26B22DF5DD9200A55DA3 /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		883A26B52DF5DD9200A55DA3 /* JarvisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisApp.swift; sourceTree = "<group>"; };
 		883A26B92DF5DD9400A55DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882BA3D02DF7ED35003BE154 /* SwiftOpenAI in Frameworks */,
 				88F2BAA62DF6856500AF744C /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +131,7 @@
 				88F2BAB02DF6A4BA00AF744C /* ChatBubble.swift */,
 				881B66B32DF71B7800DE207D /* ChatHistoryView.swift */,
 				88B104F12DF5F82000784545 /* ChatView.swift */,
+				882BA3D12DF7EDA3003BE154 /* OpenAIChat.swift */,
 				88F2BAB42DF6A50900AF744C /* ChatViewModel.swift */,
 				881B66AD2DF6C92700DE207D /* DocumentPicker.swift */,
 				88F2BAA22DF6839D00AF744C /* GeminiChat.swift */,
@@ -186,6 +191,7 @@
 			name = Jarvis;
 			packageProductDependencies = (
 				88F2BAA52DF6856500AF744C /* GoogleGenerativeAI */,
+				882BA3CF2DF7ED35003BE154 /* SwiftOpenAI */,
 			);
 			productName = Jarvis;
 			productReference = 883A26B22DF5DD9200A55DA3 /* Jarvis.app */;
@@ -261,6 +267,7 @@
 			mainGroup = 883A26A92DF5DD9100A55DA3;
 			packageReferences = (
 				88F2BAA42DF6856500AF744C /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				882BA3CE2DF7ED35003BE154 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
 			);
 			productRefGroup = 883A26B32DF5DD9200A55DA3 /* Products */;
 			projectDirPath = "";
@@ -311,6 +318,7 @@
 				88F2BAA32DF6839D00AF744C /* GeminiChat.swift in Sources */,
 				881B66B02DF6C9E000DE207D /* ImagePickerView.swift in Sources */,
 				88F2BAB22DF6A4BA00AF744C /* GuideView.swift in Sources */,
+				882BA3D22DF7EDA3003BE154 /* OpenAIChat.swift in Sources */,
 				88F2BA9D2DF6698200AF744C /* SettingsView.swift in Sources */,
 				883A26B62DF5DD9200A55DA3 /* JarvisApp.swift in Sources */,
 				881B66B62DF726E300DE207D /* LanguageManager.swift in Sources */,
@@ -652,6 +660,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		882BA3CE2DF7ED35003BE154 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jamesrochabrun/SwiftOpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		88F2BAA42DF6856500AF744C /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/generative-ai-swift";
@@ -663,6 +679,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		882BA3CF2DF7ED35003BE154 /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 882BA3CE2DF7ED35003BE154 /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
 		88F2BAA52DF6856500AF744C /* GoogleGenerativeAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 88F2BAA42DF6856500AF744C /* XCRemoteSwiftPackageReference "generative-ai-swift" */;

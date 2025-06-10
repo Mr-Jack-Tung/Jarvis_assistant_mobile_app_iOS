@@ -63,13 +63,45 @@ class GeminiProvider: APIProvider {
     }
 }
 
+class OpenAIProvider: APIProvider {
+    private let openAIChat: OpenAIChat
+    
+    init(apiKey: String) {
+        self.openAIChat = OpenAIChat(apiKey: apiKey)
+    }
+    
+    func sendMessage(prompt: String, imageData: Data?, fileData: Data?, context: [Message]) async throws -> String {
+        // OpenAI's chat completion API primarily uses text.
+        // For now, imageData and fileData are not directly supported in this integration.
+        // If needed, these would require a different approach (e.g., Vision API for images).
+        
+        // You might want to format the context messages for OpenAI if needed,
+        // but for a simple prompt, we'll just send the latest prompt.
+        
+        do {
+            let response = try await openAIChat.sendMessage(message: prompt)
+            return response
+        } catch let error as OpenAIError {
+            throw APIProviderError.openAIError(error.localizedDescription)
+        } catch {
+            throw APIProviderError.unknownError(error.localizedDescription)
+        }
+    }
+}
+
 enum APIProviderError: Error, LocalizedError {
     case noResponseText
+    case openAIError(String)
+    case unknownError(String)
     
     var errorDescription: String? {
         switch self {
         case .noResponseText:
             return "No response text received from the API."
+        case .openAIError(let message):
+            return "OpenAI API Error: \(message)"
+        case .unknownError(let message):
+            return "An unknown error occurred: \(message)"
         }
     }
 }

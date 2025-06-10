@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 import PhotosUI // Import for PhotosPickerItem
+//import OpenAIChat // Import for OpenAI API
+import SwiftOpenAI // Import for OpenAI API
 
 // Chat session structure for history
 struct ChatSessionHistory: Identifiable {
@@ -31,10 +33,13 @@ class ChatViewModel: ObservableObject {
     @Published var chatSessions: [ChatSessionHistory] = [] // Add chat sessions array
     @Published var currentLanguage: AppLanguage = .english // Track current language
     
-    // Use lazy var to initialize the provider only when first accessed
-    private lazy var geminiProvider: APIProvider = {
-        return GeminiProvider(apiKey: apiKey)
-    }()
+    private var currentAPIProvider: APIProvider {
+        if apiProvider == "openai" {
+            return OpenAIProvider(apiKey: apiKey)
+        } else {
+            return GeminiProvider(apiKey: apiKey)
+        }
+    }
     
     init() {
         // Add some sample chat sessions for testing
@@ -56,9 +61,6 @@ class ChatViewModel: ObservableObject {
             return
         }
         
-        // Create a new provider with the current API key to ensure we're using the latest key
-        self.geminiProvider = GeminiProvider(apiKey: apiKey)
-
         let userMsg = Message(text: inputText, isUser: true, imageData: selectedImageData, fileName: selectedFileName)
         messages.append(userMsg)
 
@@ -68,7 +70,7 @@ class ChatViewModel: ObservableObject {
 
         Task {
             do {
-                let botResponse = try await geminiProvider.sendMessage(
+                let botResponse = try await currentAPIProvider.sendMessage(
                     prompt: prompt,
                     imageData: selectedImageData,
                     fileData: selectedFileData,
